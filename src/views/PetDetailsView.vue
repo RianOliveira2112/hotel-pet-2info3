@@ -1,41 +1,38 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref} from 'vue';
+
 import {RouterLink, useRoute} from 'vue-router';
 
-//chamando a minha UseRoute
+const API_URL = 'http://localhost:3000';
+
+
+const tutor = ref({});
+
 const route = useRoute();
 
 
-// chamando nossa API
-const API_URL = 'http://localhost:3000/pets';
+async function carregarTutor() {
+ try{
 
+    const respostaTutor = await fetch(`${API_URL}/tutores/${route.params.id}`);
 
-// criando variaveis reativas para armazenar os dados do pet e do tutor
-const pet = ref({});
-const tutor = ref({});
-
-// função para carregar os dados do pet e do tutor
-async function carregarPet() {
-try {
-    const respostaPet = await fetch(`${API_URL}/pets/${route.params.id}`);
-    if (!respostaPet.ok) {
-        console.log('Opees, pet não encontrado');
+    tutor.value =  respostaTutor.ok ? await respostaTutor.json() : {nome: 'Tutor não encontrado'};
+    
+    console.log('tutor', tutor.value);
+} catch (error) {
+        console.error('Erro ao carregar os dados do tutor:', error);
     }
-   pet.value = await respostaPet.json();
-
-    const respostaTutor = await fetch(`${API_URL}/tutores/${pet.value.tutorId}`);
-  tutor.value = await respostaTutor.ok ? await respostaTutor.json() : { nome: 'Não Especificado' };
-  } catch (error) {
-    console.error('Erro ao carregar os dados do pet e do tutor:', error);
-  }
 }
 
-onMounted(() => {carregarPet()});
+onMounted(carregarTutor);
+
+
 </script>
 
 
 <template>
-    <h1>Nome: {{ pet.nome }}</h1>
-    <p>Espécie: {{ pet.especie }}</p>
-    <p>Tutor: {{ nomeDoTutor(pet.tutorId) }}</p>
+    <h1>Nome: {{ tutor.nome }}</h1>
+    <p>Telefone: {{ tutor.telefone }}</p>
+
 </template>
+

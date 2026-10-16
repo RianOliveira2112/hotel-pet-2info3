@@ -3,13 +3,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+
     {
       path: '/',
-      redirect: '/pets',
+      name: '/pets',
+      component: () => import('../views/PetViews.vue'),
     },
     {
       path: '/pets',
-      name: 'pet',
+      name: 'pets',
       component: () => import('../views/PetViews.vue'),
     },
     {
@@ -20,8 +22,25 @@ const router = createRouter({
     {
       path: '/pets/:id',
       name: 'detalhes-pet',
-      component: () => import('../views/PetDetailsView.vue')
-    }
+      component: () => import('../views/PetDetailsView.vue'),
+    },
+    {
+      path: '/tutores',
+      name: 'tutores',
+      component: () => import('../views/TutorView.vue'),
+    },
+      {
+      path: '/tutores/novo',
+      name: 'addTutor',
+      component: () => import('../views/AddTutorView.vue'),
+    },
+    {
+      path: '/tutores/:id',
+      name: 'detalhes-tutor',
+      component: () => import('../views/TutorDetailsView.vue'),
+    },
+    
+    
   ],
 });
 

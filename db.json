@@ -13,22 +13,22 @@
   ],
   "pets": [
     {
-      "nome": "teste",
-      "especie": "Cachorro",
-      "tutorId": "1",
-      "id": "69guvJZpBmo"
+      "id": "3",
+      "nome": "Neguinho",
+      "especie": "Gato",
+      "tutorId": "3"
     },
     {
-      "nome": "tets1212",
-      "especie": "Cachorro",
+      "nome": "aa",
+      "especie": "Gato",
       "tutorId": "1",
-      "id": "4Iw5f-2JV4w"
+      "id": "bmcQJxweq5A"
     },
     {
-      "nome": "james",
-      "especie": "Cachorro",
-      "tutorId": "2",
-      "id": "kZVicN8vFkY"
+      "nome": "aa",
+      "especie": "Gato",
+      "tutorId": "1",
+      "id": "Vw519rsd-SA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
