@@ -9,26 +9,44 @@
       "id": "2",
       "nome": "Carlos",
       "telefone": "47988880000"
+    },
+    {
+      "nome": "Rian Oliveira",
+      "telefone": "99999999999",
+      "endereco": {
+        "rua": "Rua Fátima",
+        "numero": "200",
+        "bairro": "Itaum",
+        "cidade": "Joinville",
+        "estado": "SC",
+        "cep": "89210681"
+      },
+      "email": "rian@gmail.com",
+      "cpfCnpj": "12345678912",
+      "id": "i7N4UahLFCE"
+    },
+    {
+      "nome": "Gustavo",
+      "telefone": "47999999999",
+      "endereco": {
+        "rua": "Rua Aurélio Nunes de Amorim Bezerra",
+        "numero": "10",
+        "bairro": "Jardim Iririú",
+        "cidade": "Joinville",
+        "estado": "SC",
+        "cep": "89224488"
+      },
+      "email": "gustavo@gmail.com",
+      "cpfCnpj": "12332112321",
+      "id": "ixlaNFbSz3Y"
     }
   ],
   "pets": [
     {
-      "id": "3",
-      "nome": "Neguinho",
+      "nome": "cachorro",
       "especie": "Gato",
-      "tutorId": "3"
-    },
-    {
-      "nome": "aa",
-      "especie": "Gato",
-      "tutorId": "1",
-      "id": "bmcQJxweq5A"
-    },
-    {
-      "nome": "aa",
-      "especie": "Gato",
-      "tutorId": "1",
-      "id": "Vw519rsd-SA"
+      "tutorId": "ixlaNFbSz3Y",
+      "id": "szCGbxtkicw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

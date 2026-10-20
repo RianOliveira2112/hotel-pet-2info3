@@ -17,13 +17,13 @@ import { RouterLink } from 'vue-router';
         Pets
       </RouterLink>
 
-       <RouterLink
+      <RouterLink
         class="nav-link"
         active-class="active"
         to="/tutores"
       >
         <i
-          class="bi bi-heart me-2"
+          class="bi bi-people me-2"
           aria-hidden="true"
         ></i>
         Tutores
@@ -41,7 +41,7 @@ import { RouterLink } from 'vue-router';
         Novo pet
       </RouterLink>
 
-       <RouterLink
+      <RouterLink
         class="nav-link"
         active-class="active"
         to="/tutores/novo"
@@ -50,10 +50,8 @@ import { RouterLink } from 'vue-router';
           class="bi bi-plus-circle me-2"
           aria-hidden="true"
         ></i>
-        Cadastrar Tutor
+        Novo Tutor
       </RouterLink>
-
-     
     </div>
   </nav>
 </template>

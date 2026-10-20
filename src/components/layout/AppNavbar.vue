@@ -43,6 +43,11 @@ import { RouterLink } from 'vue-router';
           >
           <RouterLink
             class="nav-link"
+            to="/tutores"
+            >Tutores</RouterLink
+          >
+          <RouterLink
+            class="nav-link"
             to="/pets/novo"
             >Novo pet</RouterLink
           >

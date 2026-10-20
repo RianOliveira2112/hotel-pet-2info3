@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-
     {
       path: '/',
       name: '/pets',
@@ -27,9 +26,9 @@ const router = createRouter({
     {
       path: '/tutores',
       name: 'tutores',
-      component: () => import('../views/TutorView.vue'),
+      component: () => import('../views/TutoresView.vue'),
     },
-      {
+    {
       path: '/tutores/novo',
       name: 'addTutor',
       component: () => import('../views/AddTutorView.vue'),
@@ -39,8 +38,6 @@ const router = createRouter({
       name: 'detalhes-tutor',
       component: () => import('../views/TutorDetailsView.vue'),
     },
-    
-    
   ],
 });
 
